@@ -10,7 +10,7 @@
 </head>
 
 <!--set background for whole page-->
-<body class="bg-white">
+<body class="bg-secondary">
 
         <!--spacing property:
             1. margin=     "m" (spacing inside element)
@@ -28,12 +28,12 @@
         -->
 
 
-
-         <!--header-->
-
-         <header class="ps-3 mt-3 bg-dark" >
+         <!--header start-->
+         <!--sticky used to hole the position ,even when the page is scroll -->
+         <header class="ps-3  bg-dark sticky-top" >
             <!--frist row-->
            <div class="row">
+            
                <!--frist column-->
                <div class="col-12 col-md-6 text-white">
                    <h3>Persnol blog</h3>
@@ -48,14 +48,24 @@
                    </ul>
                </div>
            </div>
-        </header>
+         </header>
+         <!--header end-->
 
-    <!--container start-->
+
+
+    <!-- main container start-->
     <div class="container py-2">
-
-        <!--heading for container class-->
-        <h1  class="mb-3">Welcome to my blog</h1>
-
+        <!--open card--><!--heading for container class-->
+        <div class="card bg-dark text-white">
+            <!--open card body-->
+            <div class="card-body">
+                 <!--heading-->
+                 <!--card tittle similear to normal tittle-->
+                <h1  class="card-tittle">Welcome to my blog</h1>
+            </div>
+            
+        </div>
+       
         <!--body-->
 
         <!--frist row-->
@@ -71,91 +81,220 @@
 
             <!--frist column-->
             <div class=" p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>
-                <h4>tittle 1</h4>
-                <p class="mb-2">Date:20/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                      <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                       
+                        <div class="col-6 col-sm-12">
+                            <picture><!--h stands for height . w stands for width-->
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">tittle 1</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--second column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>
-                <h4>tittle 2</h4>
-                <p class="mb-2">Date:20/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">tittle 2</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--third column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>
-                <h4>tittle 3</h4>
-                <p class="mb-2">Date:21/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--fourth column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>
-                <h4>tittle 4</h4>
-                <p class="mb-2">Date:22/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          
+            <!--frist row ended-->
         </div>
-
-        <!--second row-->
+        <!--second row -->
         <div class="row">
             <!--frist column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>
-                <h4>tittle 5</h4>
-                <p class="mb-2">Date:23/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--second column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>                <h4>tittle 6</h4>
-                <p class="mb-2">Date:24/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--third column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>                <h4>tittle 7</h4>
-                <p class="mb-2">Date:25/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--fourth column-->
             <div class="p-3 col-12 col-sm-6 col-md-6 col-lg-3">
-                <picture>
-                    <img src="https://picsum.photos/300/200 "  class="rounded img-fluid">
-                </picture>                <h4>tittle 8</h4>
-                <p class="mb-2">Date:26/9/24</p>
-                <p>this is simple blog for understanding</p>
+                <div class="card">
+                     <!-- this row for to fix the  mobile screen diplay problem -->
+                    <div class="row">
+                        <div class="col-6 col-sm-12">
+                            <picture>
+                                <img src="https://picsum.photos/300/200 "  class="rounded img-fluid h-100 w-100">
+                            </picture>
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h4 class="mb-2">Tittle 3</h4>
+                                <p >Date:20/9/24</p>
+                                <p>this is simple blog for understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+            <!--second row ended-->
         </div>
       <!--container end-->  
     </div>
+    <!-- main container end-->
 
-        <!--footer-->
+
+    <!-- form container start-->
+     <div class="container ">
+        <div class="row ">
+            <div class="col-12 col-lg-6 p-3 bg-white">
+                   <!--form start-->
+                   <h2>Feedback form</h2>
+                   <form action="">
+                       <!--form-group used to group a label and input .  -->
+                       <!--form-control used to oocupy thr full row .  1 row=12columns-->
+                       <div class="form-group">
+                           <label for="name">Name</label>
+                           <input type="text" name="user name" id="name" class="form-control">
+                       </div>
+                       
+                       <div class="form-group">
+                           <label for="mail">email</label>
+                           <input type="email" name="user email" id="mail" class="form-control">
+                       </div>
+                     
+                       <div class="form-group">
+                           <label for="Feedback">Message</label>
+                           <textarea name="user message" id="Feedback" class="form-control"></textarea>
+                       </div>
+                       <!--btn is one of the bootstrap class-->
+                       <button class="btn btn-primary my-2">submit</button>
+                   </form>
+                   <!--form end-->
+            </div>
+
+             
+        </div>
+     </div>
+     <!-- form container end-->
+
+
+
+        <!--footer start-->
         <footer class="ps-3 mt-3 bg-dark">
             
                 <!--frist row-->
                 <div class="row">
                     <!--frist column-->
                     <div class=" col-12 col-md-6 col text-white">
-                        <p>copyright &copy; 2019</p>
+                        <p>copyright &copy; 2024</p>
                     </div>
                         <!--second column-->
                         <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-end">
@@ -167,6 +306,7 @@
                 </div>
             </div>
         </footer>
+        <!--footer end-->
 
     
 </body>
