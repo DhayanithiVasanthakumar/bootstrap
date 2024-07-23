@@ -1,0 +1,12 @@
+body{
+    font-family: 'Times New Roman';
+    background-color:rgb(223, 211, 191);
+}
+.content{
+    height: 100vh;
+}
+
+.form-check-input:checked{
+    background: rgb(223, 70, 103);
+}
+
