@@ -47,8 +47,10 @@
    <main>
     <!--add container class for centering the content-->
     <div class="container">
-        <!--Button=used to trigering the content.  add button to add task-->
-        <button type="button" class="btn btn-primary">Add task</button>
+        <!--Button=used to trigering the content.  add button to add task
+        data-bs-toggle"  "  :used to add icon for that class
+        data-bs-target"  "  :used to to take action for specified id-->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addtaskmodal">Add task</button>
         <!--card-->
         <div class="card mt-3">
             <div class="card-header">
@@ -57,17 +59,143 @@
             <div class="card-body">
                 <!--list group: to display lists-->
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Task 1</li>
-                    <li class="list-group-item">Task 2</li>
-                    <li class="list-group-item">Task 3</li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Task 1 <!--Badge:indicates a message.add badge for this item..justify-content-between:used to add space beetween two column-->
+                            <span class="badge bg-success rounded-pill">New</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Task 2
+                            <span class="badge bg-warning rounded-phill">in progress</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Task 3
+                            <span class="badge bg-danger rounded-pill">canceled</span>
+                    </li>
                 </ul>
             </div>
+
+            <!--modal:for displaying alerts,notification,more detailed information.it is javascript plugin
+            fade:animate the modal box when it click-->
+            <div class="modal fade"  id="addtaskmodal">
+                <!--modal-dialog:used to sepcify the position-->
+                <div class="modal-dialog">
+                    <!--model-content:inside this modal-header,modal-body,modal-footer-->
+                    <div class="modal-content">
+                        <!--model-header-->
+                        <div class="modal-header">
+                            <h5 class="modal-tittle">Add Task</h5>
+                            <!--data-bs-dissmiss="  " :used to which class is to be close-->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!--modal-body-->
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="taskname" class="form-label">Taskname</label>
+                                    <input type="text" placeholder="Enter task name" id="taskname" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="abouttask"class="form-label">Task Details</label>
+                                    <textarea type="text" placeholder="Enter task Details" id="abouttask" class="form-control"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="taskoptions" class="form-label">Select Task</label>
+                                    <select name="" id="taskoptions" class="form-select">
+                                        <option >New</option>
+                                        <option > in progress</option>
+                                        <option > canceled</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--modal-footer-->
+                        <div class="model-footer p-3">
+                            <button type="button" class="btn btn-primary">Save task</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
+
+        <!--drop down:usefull to provide list of actions-->
+        <div class="dropdown mt-3">
+            <button class=" btn btn-secondary dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Edit Task</a></li>
+                <li><a href="#" class="dropdown-item">Delete Task</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="#" class="dropdown-item">Mark as completed</a></li>
+            </ul>
+        </div>
+
+        <!--nav and tabs start -->
+        <!--nav and tabs:allows organizing content in to diffrent section or view -->
+        <!--nav-tabs:listes will be  displayed in horizontal-->
+        <ul class="nav nav-tabs mt-3">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#alltasks" type="button" >All tasks</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#completedtasks" type="button">Completed tasks</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pendingtasks" type="button">Pending tasks</button></li>
+        </ul>
+        <!--add tab content-->
+        <div class="tab-content">
+            <!--tab-pane:used to , when the tab click that will be displayed. show is used to when the page is refresh that content will be displayed -->
+            <div class="tab-pane fade active show" id="alltasks">
+                <p>All task will be displayed here</p>
+            </div>
+            <div class="tab-pane fade" id="completedtasks">
+                <p>Completed task will be displayed here</p>
+            </div>
+            <div class="tab-pane fade" id="pendingtasks">
+                <p>Pending task will be displayed here</p>
+            </div>
+        </div>
+        <!--nav and tabs ended-->
+
+
+        <!--pagination:navigating through long page or data-->
+        <nav >
+            <ul class="pagination justify-content-center mt-3">
+                <li class="page-item"><a class="page-link" href="#">Pervious</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" herf="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link disabled" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <!--pagination end-->
+
+        <!--tooltip: when the mouse hover it  provides additional information-->
+        <!--enable tool tip link . link is in bottom-->
+        <button class="btn btn-info mt-4" data-bs-toggle="tooltip" data-bs-title="Navigate the documents" data-bs-palcement="top">Go to Navigate page</button>   
+        
+        <!--popover: similiar to tooltip but with more content an dintaction option-->
+        <button type="button" class="btn btn-danger mt-4 ms-2" data-bs-toggle="popover" title="Task update" data-bs-palcement="top" data-bs-content="This menu will save all current change in the tasks at the one time.this take some time for processing"> save changes</button>
+
     </div>
    </main>
 
+   <!--popover link :it must use before bootstrap.js  link-->
+   <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.7"></script>
    <!--link bootstrap script-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <!--link for tooltip-->
+   <script>
+    //for tooltip script
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)})
+      //for popover script
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)})
 
+    </script>
 </body>
 </html>
