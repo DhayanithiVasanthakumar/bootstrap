@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--link css-->
+    <link rel="stylesheet" href="forgetpass.css">
+    <title>Reset Password</title>
+    
+</head>
+<body >
+    <!--Container Start-->
+    <section class="container">
+        <!--Create row and add Content with in it . use d-flex to center the contents:justify-content=horizontal order,align-items=vertical order-->
+        <div class="row content d-flex justify-content-center align-items-center">
+            <!--Create a div with class col-md-4 and add the form with in it.when it turns in to medium device it occupy 6 box in container-->
+            <div class="col-md-6">
+                <!--Box started-->
+                <!--create box with in column-->
+                <div class="box shadow bg-white p-4">
+                    <h3 class="mb-4  " > Reset Password</h3>
+                    <p>Enter your Email to recover Password </p>
+                    <!--Form start-->
+                    <form action="#" >
+                        <!--form floating used to when tap the form box it will float avove the text -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded" name="user mail" id="mail" placeholder="">
+                            <label for="mail" >Email</label>
+                        </div>
+                        <!--Create Reset email. mx-auto:center the button horizontally.d-grid gap-2 col-6:In grid allocate 6 collumn in gap 2-->
+                        <div class="mb-3 d-grid gap-2 col-6 mx-auto mt-3">
+                            <button type="submit" class="btn btn-success btn-lg  rounded " data-bs-toggle="popover" data-bs-content="Link has been sent successfully  to your Email.Click that Link and Change your Password" data-bs-placement="top">Sent Reset Email</button>
+                        </div>
+                    </form>
+                    <!--Form ended-->
+                </div>
+                <!--box ended-->
+            </div>
+            
+        </div>
+        <!--Row ended-->
+
+    </section>
+    <!--Container ended-->
+
+
+
+     <!--popover link :it must use before bootstrap.js  link-->
+   <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.7"></script>
+    
+    <!--bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        //for popover script
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)})
+    </script>
+</body>
+
+</html>
