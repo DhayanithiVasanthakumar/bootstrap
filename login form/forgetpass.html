@@ -28,11 +28,39 @@
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded" name="user mail" id="mail" placeholder="" required>
                             <label for="mail" >Email</label>
+
+                            
                         </div>
                         <!--Create Reset email. mx-auto:center the button horizontally.d-grid gap-2 col-6:In grid allocate 6 collumn in gap 2-->
-                        <div class="mb-3 d-grid gap-2 col-6 mx-auto mt-3">
-                            <button type="submit" class="btn btn-success btn-lg  rounded " data-bs-toggle="popover" data-bs-content="Link has been sent successfully  to your Email.Click that Link and Change your Password" data-bs-placement="top">Sent Reset Email</button>
+                        <div class="mb-3 d-grid gap-2 col-6 mx-auto mt-3"> 
+                            <!-- Button trigger modal -->
+                             <!--data-bs-target:always in camel case -->
+                            <button type="submit" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modalMessage">
+                                Sent reset link
+                            </button>
                         </div>
+                       
+  
+                        <!-- Modal id: always in camel case-->
+                        <div class="modal fade" id="modalMessage">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalLabel">Success</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+                                    </div>
+    
+                                    <div class="modal-body">
+                                        Reset link has been sent to your mail
+                                    </div>
+    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary "><a href="./login.html" class="text-decoration-none text-white">Ok</a> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </form>
                     <!--Form ended-->
                 </div>
@@ -58,6 +86,12 @@
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)})
+        //model link
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()})
     </script>
 </body>
 
